@@ -449,8 +449,7 @@ export default function ProductPage({ params }) {
                             {/* 3. Step 3: Presentation Style */}
                             {product.has_gifts && !selectedModel?.disable_gifts && (
                                 <div className={styles.controlGroup} style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', marginTop: '1rem' }}>
-                                    <label className={styles.label}>Gift & Presentation Setup</label>
-                                    <p style={{ fontSize: '0.9rem', color: '#888', marginBottom: '1rem', fontStyle: 'italic' }}>Present it beautifully with our signature packaging.</p>
+                                    <label className={styles.label} style={{ color: 'var(--color-accent)', fontSize: '1.1rem', letterSpacing: '1px', marginBottom: '1.5rem', display: 'block' }}>Make It a Gift?</label>
                                     {giftOptions.length === 0 ? (
                                         <p style={{ fontSize: '0.9rem', color: '#888' }}>Loading options...</p>
                                     ) : (
