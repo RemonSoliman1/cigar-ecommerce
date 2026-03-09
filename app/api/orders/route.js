@@ -1,0 +1,62 @@
+import { NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js';
+
+// Initialize Supabase Client
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+export async function GET(request) {
+    const { searchParams } = new URL(request.url);
+    const email = searchParams.get('email');
+
+    if (!email) {
+        return NextResponse.json({ error: 'Email is required' }, { status: 400 });
+    }
+
+    try {
+        // 1. Get Customer ID first
+        const { data: customer, error: customerError } = await supabase
+            .from('customers')
+            .select('id')
+            .eq('email', email)
+            .single();
+
+        if (customerError || !customer) {
+            // No customer found means no orders yet
+            return NextResponse.json({ orders: [] });
+        }
+
+        // 2. Get Orders for this Customer
+        const { data: orders, error: ordersError } = await supabase
+            .from('orders')
+            .select('*, order_items(*)')
+            .eq('user_email', email)
+            .order('created_at', { ascending: false });
+
+        if (ordersError) throw ordersError;
+
+        const formattedOrders = orders.map(o => ({
+            ...o,
+            total: o.total_amount || o.total_price || 0,
+            items: o.order_items || []
+        }));
+
+        return NextResponse.json({ orders: formattedOrders });
+
+        // 3. (Optional) Get Order Items if needed, but for list view, 
+        // we might not need full details yet, or we can fetch them here.
+        // For simplicity and performance, let's return the order structure 
+        // that matches what the frontend expects.
+
+        // Transform to match frontend OrderCard expectation if needed
+        // Frontend expects: { id, date, status, total, items: [...] }
+        // We might need to fetch items for each order or just store a summary.
+        // Let's assume for now we just return the orders and refine if items are missing.
+
+        return NextResponse.json({ orders: formattedOrders });
+    } catch (error) {
+        console.error("Fetch Orders Error:", error);
+        return NextResponse.json({ error: 'Failed to fetch orders' }, { status: 500 });
+    }
+}

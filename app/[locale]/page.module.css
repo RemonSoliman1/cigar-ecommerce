@@ -1,0 +1,365 @@
+.hero {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  background: linear-gradient(rgba(18, 12, 10, 0.7), rgba(18, 12, 10, 0.4)), url('/images/hero.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 2rem;
+  border: 1px solid rgba(198, 168, 124, 0.3);
+  /* Subtle gold border */
+  background: rgba(18, 12, 10, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .heroContent {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionSubtitle {
+  color: var(--color-text-secondary);
+  margin-top: -0.5rem;
+}
+
+.productGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.productGrid>* {
+  flex: 1 1 280px;
+  max-width: 320px;
+}
+
+.card {
+  background: var(--color-bg-secondary);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardImage {
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage img {
+  transition: transform 0.8s ease;
+}
+
+.cardImage:hover img {
+  transform: scale(1.05);
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 12, 10, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cardImage:hover .cardOverlay {
+  opacity: 1;
+}
+
+.cardInfo {
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.cardHoverInfo {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+
+.card:hover .cardHoverInfo {
+  max-height: 50px;
+  opacity: 1;
+  margin-bottom: 0.5rem;
+}
+
+.cardMeta {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.price {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.rating {
+  color: #F5C518;
+  /* Standard Star Color */
+}
+
+.loyaltyBanner {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: 4rem 0;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.loyaltyBanner h2 {
+  color: var(--color-bg);
+  margin-bottom: 0.5rem;
+}
+
+/* Logged In Loyalty Styles */
+.loyaltyStatus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pointsDisplay {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin: 1rem 0;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 3rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pointCircle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.pointValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.pointLabel {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.loyaltyHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tierBadge {
+  background: var(--color-bg);
+  color: var(--color-accent);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid var(--color-bg);
+}
+
+.tierProgress {
+  flex: 1;
+  text-align: left;
+  min-width: 300px;
+}
+
+.progressText {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  transition: width 0.5s ease-out;
+}
+
+.benefitsList h4 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+}
+
+.benefitsList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.benefitsList li {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.maxTier {
+  color: #fff;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.loyaltyActions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Button overrides for this section */
+.loyaltyBanner :global(.btn-outline-dark) {
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.loyaltyBanner :global(.btn-outline-dark):hover {
+  background: #fff;
+  color: var(--color-accent);
+}
+
+.loyaltyBanner :global(.btn-dark) {
+  background: #120C0A;
+  color: #fff;
+  border: 1px solid #120C0A;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.loyaltyBanner :global(.btn-dark):hover {
+  background: transparent;
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .pointsDisplay {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .tierInfo {
+    text-align: center;
+  }
+
+  .loyaltyActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .loyaltyActions a {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+}

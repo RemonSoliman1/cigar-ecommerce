@@ -1,0 +1,478 @@
+[
+  {
+    "id": "cohiba-mini-20",
+    "brandId": "cohiba",
+    "name": "Cohiba Mini 20",
+    "type": "cigarillo",
+    "series": "Mini",
+    "description": "Small cigarillos with the classic Cohiba flavor.",
+    "strength": "Medium",
+    "flavor_profile": [
+      "Earth",
+      "Spice",
+      "Leather"
+    ],
+    "rating": 4.5,
+    "image": "/images/cigars/cohiba-behike.png",
+    "models": [
+      {
+        "name": "Tin of 20",
+        "size": "3.2 x 20",
+        "price": 25.0
+      }
+    ]
+  },
+  {
+    "id": "montecristo-club-20",
+    "brandId": "montecristo",
+    "name": "Montecristo Club 20",
+    "type": "cigarillo",
+    "series": "Club",
+    "description": "The classic Montecristo blend in a small format.",
+    "strength": "Medium",
+    "flavor_profile": [
+      "Coffee",
+      "Cocoa",
+      "Wood"
+    ],
+    "rating": 4.4,
+    "image": "/images/cigars/montecristo-no2.png",
+    "models": [
+      {
+        "name": "Tin of 20",
+        "size": "3.7 x 22",
+        "price": 22.0
+      }
+    ]
+  },
+  {
+    "id": "davidoff-mini-gold",
+    "brandId": "davidoff",
+    "name": "Davidoff Mini Gold",
+    "type": "cigarillo",
+    "series": "Mini",
+    "description": "Smooth and elegant mini cigarillos from Davidoff.",
+    "strength": "Mild-Medium",
+    "flavor_profile": [
+      "Cream",
+      "Cedar",
+      "Nuts"
+    ],
+    "rating": 4.6,
+    "image": "/images/cigars/davidoff-winston.png",
+    "models": [
+      {
+        "name": "Tin of 20",
+        "size": "3.4 x 20",
+        "price": 28.0
+      }
+    ]
+  },
+  {
+    "id": "cohiba-behike",
+    "brandId": "cohiba",
+    "name": "Cohiba Behike",
+    "type": "cigar",
+    "series": "Behike",
+    "description": "The most exclusive line of Cohiba, using the rare Medio Tiempo leaf.",
+    "strength": "Full",
+    "flavor_profile": [
+      "Cream",
+      "Cedar",
+      "Earth",
+      "Leather"
+    ],
+    "rating": 4.9,
+    "new": true,
+    "image": "/images/cigars/cohiba-behike.png",
+    "models": [
+      {
+        "name": "BHK 52",
+        "size": "4.7 x 52",
+        "price": 150.0
+      },
+      {
+        "name": "BHK 54",
+        "size": "5.6 x 54",
+        "price": 200.0
+      },
+      {
+        "name": "BHK 56",
+        "size": "6.5 x 56",
+        "price": 250.0
+      }
+    ]
+  },
+  {
+    "id": "cohiba-siglo-vi",
+    "brandId": "cohiba",
+    "name": "Cohiba Siglo VI",
+    "type": "cigar",
+    "series": "Siglo",
+    "description": "A modern classic, known for its perfect construction and rich flavor.",
+    "strength": "Medium-Full",
+    "flavor_profile": [
+      "Cocoa",
+      "Vanilla",
+      "Spice"
+    ],
+    "rating": 4.8,
+    "image": "/images/cigars/cohiba-siglo6.png",
+    "models": [
+      {
+        "name": "Canonazo",
+        "size": "5.9 x 52",
+        "price": 85.0
+      }
+    ]
+  },
+  {
+    "id": "montecristo-no2",
+    "brandId": "montecristo",
+    "name": "Montecristo No. 2",
+    "type": "cigar",
+    "series": "Classic",
+    "description": "The undisputed king of torpedoes. A must-have for any humidor.",
+    "strength": "Medium-Full",
+    "flavor_profile": [
+      "Coffee",
+      "Almond",
+      "Leather"
+    ],
+    "rating": 4.9,
+    "image": "/images/cigars/montecristo-no2.png",
+    "models": [
+      {
+        "name": "Torpedo",
+        "size": "6.1 x 52",
+        "price": 45.0
+      }
+    ]
+  },
+  {
+    "id": "fuente-opusx",
+    "brandId": "arturo-fuente",
+    "name": "Fuente Fuente OpusX",
+    "type": "cigar",
+    "series": "OpusX",
+    "description": "The first ever Dominican Puro, highly sought after.",
+    "strength": "Full",
+    "flavor_profile": [
+      "Pepper",
+      "Cinnamon",
+      "Cedar"
+    ],
+    "rating": 4.95,
+    "new": true,
+    "image": "/images/cigars/opusx.png",
+    "models": [
+      {
+        "name": "Robusto",
+        "size": "5.25 x 50",
+        "price": 60.0
+      },
+      {
+        "name": "Double Corona",
+        "size": "7.6 x 49",
+        "price": 80.0
+      }
+    ]
+  },
+  {
+    "id": "oliva-serie-v-melanio",
+    "brandId": "oliva",
+    "series": "melanio",
+    "name": "Oliva Serie V Melanio",
+    "type": "cigar",
+    "description": "Cigar of the Year 2014. Ecuador Sumatra wrapper over Nicaraguan binder and filler.",
+    "strength": "Full",
+    "flavor_profile": [
+      "Coffee",
+      "Leather",
+      "Pepper",
+      "Toast"
+    ],
+    "rating": 4.9,
+    "image": "/images/cigars/oliva-melanio.png",
+    "models": [
+      {
+        "name": "Figurado",
+        "size": "6.5 x 52",
+        "price": 18.00
+      },
+      {
+        "name": "Robusto",
+        "size": "5 x 52",
+        "price": 12.00
+      }
+    ]
+  },
+  {
+    "id": "oliva-serie-v",
+    "brandId": "oliva",
+    "series": "serie-v",
+    "name": "Oliva Serie V",
+    "type": "cigar",
+    "description": "Blended to deliver full body taste while maintaining an unparalleled smoothness.",
+    "strength": "Full",
+    "flavor_profile": [
+      "Chocolate",
+      "Coffee",
+      "Spice"
+    ],
+    "rating": 4.8,
+    "image": "/images/cigars/oliva-v.png",
+    "models": [
+      {
+        "name": "Double Robusto",
+        "size": "5 x 54",
+        "price": 10.00
+      },
+      {
+        "name": "Belicoso",
+        "size": "5 x 54",
+        "price": 11.00
+      }
+    ]
+  },
+  {
+    "id": "oliva-serie-g",
+    "brandId": "oliva",
+    "series": "serie-g",
+    "name": "Oliva Serie G",
+    "type": "cigar",
+    "description": "A medium body blend made with an African Cameroon wrapper.",
+    "strength": "Medium",
+    "flavor_profile": [
+      "Nutty",
+      "Cedar",
+      "Sweetness"
+    ],
+    "rating": 4.6,
+    "image": "/images/cigars/oliva-g.png",
+    "models": [
+      {
+        "name": "Robusto",
+        "size": "4.5 x 50",
+        "price": 8.00
+      }
+    ]
+  },
+  {
+    "id": "oliva-serie-o",
+    "brandId": "oliva",
+    "series": "serie-o",
+    "name": "Oliva Serie O",
+    "type": "cigar",
+    "description": "A Nicaraguan Puro. Made in the original Cuban tradition of growing the same Habano seed in diverse regions.",
+    "strength": "Medium-Full",
+    "flavor_profile": [
+      "Earth",
+      "Cedar",
+      "Spice"
+    ],
+    "rating": 4.7,
+    "image": "/images/cigars/oliva-o.png",
+    "models": [
+      {
+        "name": "Robusto",
+        "size": "5 x 50",
+        "price": 9.00
+      }
+    ]
+  },
+  {
+    "id": "cohiba-shorts",
+    "brandId": "cohiba",
+    "name": "Cohiba Shorts",
+    "type": "cigarillo",
+    "series": "Shorts",
+    "description": "Big Cohiba flavor in a small format.",
+    "strength": "Medium",
+    "flavor_profile": [
+      "Earth",
+      "Grass"
+    ],
+    "rating": 4.5,
+    "image": "/images/cigars/cohiba-shorts.png",
+    "models": [
+      {
+        "name": "Pack of 10",
+        "size": "3.25 x 26",
+        "price": 25.0
+      }
+    ]
+  },
+  {
+    "id": "st-dupont-lighter",
+    "brandId": "std",
+    "name": "S.T. Dupont Ligne 2",
+    "type": "accessory",
+    "category": "lighter",
+    "description": "The classic 'cling' sound. Gold finish.",
+    "rating": 5.0,
+    "image": "/images/accessories/lighter.png",
+    "models": [
+      {
+        "name": "Gold Dust",
+        "size": "Standard",
+        "price": 1200.0
+      }
+    ]
+  },
+  {
+    "id": "xikar-xi1",
+    "brandId": "xikar",
+    "name": "Xikar Xi1 Cutter",
+    "type": "accessory",
+    "category": "cutter",
+    "description": "The classic teardrop shape. Stainless steel blades.",
+    "rating": 4.8,
+    "image": "/images/accessories/xi1.png",
+    "models": [
+      {
+        "name": "Black",
+        "size": "Standard",
+        "price": 75.00
+      }
+    ]
+  },
+  {
+    "id": "humidor-elie-bleu",
+    "brandId": "elie-bleu",
+    "name": "Elie Bleu Medals",
+    "type": "accessory",
+    "category": "humidor",
+    "series": "box-humidor",
+    "description": "Handcrafted in France, holds 75 cigars. Blue lacquer finish.",
+    "rating": 5.0,
+    "image": "/images/accessories/humidor.png",
+    "models": [
+      {
+        "name": "75 Count",
+        "size": "Large",
+        "price": 3500.0
+      }
+    ]
+  },
+  {
+    "id": "newair-electric",
+    "brandId": "newair",
+    "name": "NewAir 250 Count",
+    "type": "accessory",
+    "category": "humidor",
+    "series": "electric-humidor",
+    "description": "Climate controlled electric humidor with opti-temp heating and cooling.",
+    "rating": 4.6,
+    "image": "/images/accessories/newair.png",
+    "models": [
+      {
+        "name": "250 Count",
+        "size": "Freestanding",
+        "price": 450.00
+      }
+    ]
+  },
+  {
+    "id": "audew-cooling",
+    "brandId": "audew",
+    "name": "Audew Cooler Humidor",
+    "type": "accessory",
+    "category": "humidor",
+    "series": "electric-cooling-humidor",
+    "description": "Precision cooling for perfect preservation in hot climates.",
+    "rating": 4.7,
+    "image": "/images/accessories/audew.png",
+    "models": [
+      {
+        "name": "300 Count",
+        "size": "Large",
+        "price": 380.00
+      }
+    ]
+  },
+  {
+    "id": "romeo-y-julieta-churchill",
+    "brandId": "romeo-y-julieta",
+    "name": "Romeo y Julieta Churchill",
+    "type": "cigar",
+    "series": "Churchill",
+    "description": "Named after Sir Winston Churchill. A classic medium-bodied Cuban.",
+    "strength": "Medium",
+    "flavor_profile": [
+      "Cedar",
+      "Fruit",
+      "Spice"
+    ],
+    "rating": 4.6,
+    "image": "/images/cigars/ryj-churchill.png",
+    "models": [
+      {
+        "name": "Churchill",
+        "size": "7 x 47",
+        "price": 35.00
+      }
+    ]
+  },
+  {
+    "id": "davidoff-aniversario",
+    "brandId": "davidoff",
+    "name": "Davidoff Aniversario No. 3",
+    "type": "cigar",
+    "series": "Aniversario",
+    "description": "Celebratory blend with exquisite harmony and aroma.",
+    "strength": "Medium",
+    "flavor_profile": [
+      "Cream",
+      "Nutty",
+      "Floral"
+    ],
+    "rating": 4.9,
+    "image": "/images/cigars/davidoff-no3.png",
+    "models": [
+      {
+        "name": "Toro",
+        "size": "6 x 50",
+        "price": 42.00
+      }
+    ]
+  },
+  {
+    "id": "sampler-cuban-selection",
+    "brandId": "habanos",
+    "name": "Cuban Selection Sampler",
+    "type": "cigar",
+    "category": "sampler",
+    "series": "samplers",
+    "description": "A curated selection of 5 premium Cuban cigars.",
+    "strength": "Medium-Full",
+    "rating": 4.8,
+    "image": "/images/cigars/cuban-sampler.png",
+    "models": [
+      {
+        "name": "5-Pack",
+        "size": "Assorted",
+        "price": 120.00
+      }
+    ]
+  },
+  {
+    "id": "bundle-factory-overrun",
+    "brandId": "factory",
+    "name": "Nicaraguan Factory Bundles",
+    "type": "cigar",
+    "category": "bundle",
+    "series": "bundles",
+    "description": "Premium long-filler cigars without the band or box price.",
+    "strength": "Medium",
+    "rating": 4.2,
+    "image": "/images/cigars/bundle-nicaragua.png",
+    "models": [
+      {
+        "name": "Robusto Bundle (20)",
+        "size": "5 x 50",
+        "price": 80.00
+      }
+    ]
+  }
+]

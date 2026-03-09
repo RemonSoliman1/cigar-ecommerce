@@ -1,0 +1,119 @@
+.header {
+    text-align: center;
+    padding: 4rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-serif);
+}
+
+.header p {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+}
+
+.tiersContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.tierCard {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.tierCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+}
+
+.tierHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tierHeader h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+}
+
+.pointsReq {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.benefitsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefitsList li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-secondary);
+}
+
+.icon {
+    color: var(--color-accent);
+    min-width: 16px;
+}
+
+/* Tier Specific Accents */
+.silver .tierHeader h2 {
+    color: #C0C0C0;
+}
+
+.gold .tierHeader h2 {
+    color: #FFD700;
+}
+
+.platinum .tierHeader h2 {
+    color: #E5E4E2;
+}
+
+.platinum {
+    border-color: #E5E4E2;
+    background: linear-gradient(145deg, var(--color-bg-secondary), rgba(229, 228, 226, 0.05));
+}
+
+.faqSection {
+    margin-top: 4rem;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.faqSection h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.faqItem {
+    margin-bottom: 2rem;
+}
+
+.faqItem h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.faqItem p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}

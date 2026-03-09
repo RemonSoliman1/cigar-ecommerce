@@ -1,0 +1,78 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.modal {
+    background: var(--color-bg);
+    border: 1px solid var(--color-accent);
+    padding: 3rem;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(198, 168, 124, 0.2);
+}
+
+.title {
+    font-family: var(--font-serif);
+    color: var(--color-accent);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.text {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: #fff;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btnConfirm {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnConfirm:hover {
+    background: #fff;
+}
+
+.btnDeny {
+    background: transparent;
+    color: #666;
+    border: 1px solid #333;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+.btnDeny:hover {
+    border-color: #666;
+    color: #888;
+}
+
+.subtext {
+    font-size: 0.75rem;
+    color: #555;
+    line-height: 1.4;
+}

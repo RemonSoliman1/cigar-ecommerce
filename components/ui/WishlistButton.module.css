@@ -1,0 +1,43 @@
+.wishlistBtn {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    z-index: 10;
+}
+
+.wishlistBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.added {
+    color: var(--color-accent);
+}
+
+.wishlistDetailBtn {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    /* Square with rounded corners to match input */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.wishlistDetailBtn:hover {
+    background: rgba(198, 168, 124, 0.1);
+    border-color: var(--color-accent);
+}

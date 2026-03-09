@@ -1,0 +1,39 @@
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--color-bg-secondary);
+    padding: 3rem;
+    border: 1px solid var(--color-border);
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section h2 {
+    font-family: var(--font-serif);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.section p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #ddd;
+}

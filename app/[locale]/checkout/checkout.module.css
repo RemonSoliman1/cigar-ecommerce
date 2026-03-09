@@ -1,0 +1,324 @@
+.layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    padding: 4rem 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem 0;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .main {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .pageTitle {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .section,
+    .summaryCard {
+        padding: 1rem;
+        /* Reduce padding heavily to claw back width */
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        /* Stack form inputs */
+    }
+
+    .cardRow {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+.pageTitle {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.section {
+    background: var(--color-bg-secondary);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-border);
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.sectionHeader h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Cart Items */
+.cartItem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.thumb {
+    width: 60px;
+    height: 60px;
+    background: var(--color-bg);
+    object-fit: contain;
+    padding: 4px;
+    border: 1px solid rgba(197, 163, 92, 0.2);
+    border-radius: 4px;
+}
+
+.itemInfo {
+    flex: 1;
+}
+
+.itemInfo h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.itemInfo a:hover h4 {
+    color: var(--color-accent);
+}
+
+.meta {
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+}
+
+.itemPrice {
+    font-weight: 600;
+    min-width: 80px;
+    text-align: right;
+    color: var(--color-accent);
+}
+
+.del {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.quant {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-bg);
+    padding: 0.2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--btn-radius);
+}
+
+.quant button {
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quant button:hover:not(:disabled) {
+    color: var(--color-accent);
+}
+
+.quant button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.quant span {
+    min-width: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Form */
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    color: #fff;
+    font-family: inherit;
+    border-radius: 2px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.inputGroup input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--color-accent);
+}
+
+.inputError {
+    border-color: #8B0000 !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 0 1px #8B0000 !important;
+}
+
+.errorText {
+    color: #8B0000;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+/* Payment */
+.paymentMethods {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pMethod {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.pMethod>span {
+    white-space: nowrap;
+    text-align: left;
+}
+
+.pMethod input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.activeMethod {
+    border-color: var(--color-accent);
+    background: rgba(197, 163, 92, 0.05);
+    box-shadow: 0 0 15px rgba(197, 163, 92, 0.1), inset 0 0 0 1px var(--color-accent);
+}
+
+.cardInputs {
+    background: var(--color-bg);
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-top: none;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cardInputs input {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 0.5rem;
+    color: #fff;
+}
+
+.cardRow {
+    display: flex;
+    gap: 1rem;
+}
+
+.actions {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+/* Summary Box */
+.summaryCard {
+    background: var(--color-bg-secondary);
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    position: sticky;
+    top: 120px;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: var(--color-text-secondary);
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-accent);
+}

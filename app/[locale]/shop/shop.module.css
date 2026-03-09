@@ -1,0 +1,570 @@
+.page {
+    padding: 4rem 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filterGroup {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+}
+
+.controlsBar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.searchInput {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.8rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    margin-right: auto;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.sortWrapper label {
+    margin-inline-end: 1rem;
+    /* changed from margin-right */
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ... */
+
+.layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+    align-items: start;
+    min-width: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    border-inline-end: 1px solid var(--color-border);
+    /* changed from border-right */
+    padding-inline-end: 2rem;
+    /* changed from padding-right */
+}
+
+/* ... */
+
+/* Nested Sidebar Menu */
+.sidebarTitle {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-accent);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.menuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuItem,
+.menuList li {
+    margin-bottom: 0.5rem;
+}
+
+
+.menuBtnWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menuBtn {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.expandBtn {
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expandBtn:hover {
+    color: var(--color-accent);
+}
+
+.menuBtn:hover,
+.activeItem .menuBtn {
+    color: var(--color-accent);
+    padding-left: 0.5rem;
+}
+
+.arrow {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.subMenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: 0.5rem;
+}
+
+.subMenu.expanded {
+    max-height: 1000px;
+    /* Arbitrary large height for transition */
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    transition: max-height 0.5s ease-in;
+}
+
+.subBtn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #aaa;
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    display: block;
+}
+
+.subBtn:hover,
+.activeSub {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+}
+
+.seriesMenu {
+    padding-left: 1rem;
+    margin-top: 0.2rem;
+    border-left: 1px solid rgba(198, 168, 124, 0.3);
+}
+
+.seriesBtn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 0.85rem;
+    padding: 0.2rem 0;
+    cursor: pointer;
+    transition: color 0.2s;
+    display: block;
+}
+
+.seriesBtn:hover,
+.activeSeries {
+    color: var(--color-accent);
+}
+
+.filterGroup button:hover {
+    color: var(--color-accent);
+}
+
+.activeFilter button {
+    color: var(--color-accent);
+    font-weight: 600;
+    padding-inline-start: 0.5rem;
+    /* changed from padding-left */
+    border-inline-start: 2px solid var(--color-accent);
+    /* changed from border-left */
+}
+
+.nestedSeries {
+    margin-inline-start: 1rem;
+    /* changed from margin-left */
+    margin-top: 0.5rem;
+    border-inline-start: 1px solid var(--color-border);
+    /* changed from border-left */
+    padding-inline-start: 0.5rem;
+    /* changed from padding-left */
+}
+
+.activeSubFilter button {
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg-secondary);
+    transition: transform 0.3s ease;
+    border: 1px solid transparent;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+}
+
+.imageContainer {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    background: var(--color-bg-secondary);
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(18, 12, 10, 0.9);
+    /* Darker overlay for text legibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.overlayContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.quickViewBtn {
+    color: var(--color-bg);
+    background: var(--color-accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2px;
+}
+
+.newBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: 2px;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hoverDetails {
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.cardContent {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.brand {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.name {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #fff;
+}
+
+.price {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.noResults {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    background: var(--color-bg-secondary);
+    border: 1px dashed var(--color-border);
+}
+
+/* Default: Hide Filter Toggle */
+.mobileFilterToggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        /* User requested seeing more than 1 product */
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .sidebarWrapper {
+        display: none;
+        /* Default hidden on mobile */
+        border-bottom: 1px solid var(--color-border);
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-right: none;
+    }
+
+    .sidebarWrapper.showFilters {
+        display: block;
+        /* Show only when class added */
+    }
+
+    .mobileFilterToggle {
+        display: flex;
+        /* Make sure toggle is visible */
+        align-items: center;
+        padding: 0.6rem 1rem;
+        border: 1px solid var(--color-border);
+        background: transparent;
+        color: var(--color-text-secondary);
+        font-family: var(--font-sans);
+        font-size: 0.9rem;
+        cursor: pointer;
+        margin-bottom: 0;
+        /* Remove margin, alignment handled by flex */
+        height: 42px;
+        /* Match select height approx */
+    }
+
+    .mobileFilterToggle:hover {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+    }
+
+    .sortWrapper label {
+        display: none;
+        /* Hide 'Sort By' label text on mobile to save space */
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.emptyState {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem;
+    min-height: 400px;
+}
+
+.emptyState p {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    max-width: 800px;
+    /* Stretch out instead of 5 rows */
+    line-height: 1.6;
+}
+
+.cardHoverInfo {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 0px;
+}
+
+.card:hover .cardHoverInfo {
+    max-height: 50px;
+    opacity: 1;
+    margin-bottom: 10px;
+}
+
+.cardMeta {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 5px 0 0 0;
+}
+
+/* Brand Carousel */
+.brandCarouselSection {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.brandCarouselHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.brandCarouselHeader h2 {
+    font-size: 1.2rem;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.brandCarouselHeader a {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.brandCarousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 0.5rem;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari, Opera */
+.brandCarousel::-webkit-scrollbar {
+    display: none;
+}
+
+.brandItem {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 100px;
+}
+
+
+
+.brandLogo {
+    width: 90px;
+    height: 90px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+}
+
+.brandItem:hover .brandLogo {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(197, 163, 92, 0.6));
+}
+
+.brandLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.brandName {
+    font-size: 0.85rem;
+    text-align: center;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}

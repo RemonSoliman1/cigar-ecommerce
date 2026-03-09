@@ -1,0 +1,196 @@
+/* Dashboard Layout */
+.container {
+    padding: 3rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboardGrid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    min-height: 60vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.userBrief {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.userBrief h3 {
+    font-family: var(--font-serif);
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.userBrief p {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.navBtn {
+    background: transparent;
+    border: none;
+    color: var(--color-text-secondary);
+    text-align: left;
+    padding: 1rem;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-left: 3px solid transparent;
+}
+
+.navBtn:hover,
+.activeBtn {
+    background: rgba(198, 168, 124, 0.1);
+    color: var(--color-accent);
+    border-left-color: var(--color-accent);
+}
+
+/* Content Area */
+.content h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+/* Overview Cards */
+.section {
+    width: 100%;
+    overflow-x: hidden;
+    /* Prevent page scroll */
+}
+
+.orderList {
+    width: 100%;
+    overflow-x: auto;
+    /* Allow independent scroll if needed */
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.statCard {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.statValue {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.statLabel {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-secondary);
+}
+
+/* Address & Settings Forms */
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
+    padding: 0.8rem;
+    color: #fff;
+    font-family: var(--font-sans);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboardGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100%;
+        overflow: hidden;
+        /* Prevent grid blowout */
+    }
+
+    .container {
+        padding: 1rem 0.5rem;
+        /* Very small padding */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .sidebar {
+        position: static;
+        margin-bottom: 1.5rem;
+        padding: 0;
+        /* Remove sidebar padding to save space */
+        border: none;
+        background: transparent;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    /* Force tables/lists to scroll */
+    .orderList,
+    .section {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+}
