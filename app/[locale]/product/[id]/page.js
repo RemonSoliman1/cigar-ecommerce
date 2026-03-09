@@ -317,33 +317,33 @@ export default function ProductPage({ params }) {
 
                 {/* Right: Details */}
                 <div className={styles.detailsSection}>
-                    <div className={styles.header}>
-                        {brand?.name && <span className={styles.brandName}>{brand.name}</span>}
-                        <h1 className={styles.title}>{product.name}</h1>
-
-                        {/* Expert Rating */}
-                        {product.rating && (() => {
-                            const str = String(product.rating);
-                            const match = str.match(/^\d+/);
-                            // Fallback to 90 if it was a 5-star style rating
-                            const score = match ? parseInt(match[0], 10) : 90;
-                            // Ensure scaled to 100 if it's less than 10 (e.g. they had a 5 before)
-                            const displayScore = score <= 10 ? score * 20 : score;
-
-                            return (
-                                <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem', marginTop: '0.5rem' }}>
-                                    <span style={{ fontSize: '1rem', fontWeight: 'bold', color: 'var(--color-accent)', textTransform: 'uppercase', letterSpacing: '1px' }}>Cigar Aficionado: </span>
-                                    <span style={{ marginLeft: '10px', fontSize: '1.2rem', color: 'var(--color-text-primary)' }}>{displayScore} / 100</span>
-                                </div>
-                            );
-                        })()}
-
+                    <div className={styles.header} style={{ display: 'none' }}>
+                        {/* Intentionally hidden so it doesn't break CSS flow structure above it */}
                     </div>
 
                     {/* Layout Wrapper */}
                     <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', alignItems: 'flex-start', justifyContent: 'center' }}>
                         {/* Left Column */}
                         <div style={{ flex: '1 1 320px', display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '500px' }}>
+                            <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+                                {brand?.name && <span className={styles.brandName} style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.2rem', color: 'var(--color-accent)', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>{brand.name}</span>}
+                                <h1 className={styles.title} style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', color: 'var(--color-text-primary)' }}>{product.name}</h1>
+
+                                {/* Expert Rating */}
+                                {product.rating && (() => {
+                                    const str = String(product.rating);
+                                    const match = str.match(/^\d+/);
+                                    const score = match ? parseInt(match[0], 10) : 90;
+                                    const displayScore = score <= 10 ? score * 20 : score;
+
+                                    return (
+                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', marginTop: '1rem' }}>
+                                            <span style={{ fontSize: '1rem', fontWeight: 'bold', color: 'var(--color-accent)', textTransform: 'uppercase', letterSpacing: '1px' }}>Cigar Aficionado: </span>
+                                            <span style={{ marginLeft: '10px', fontSize: '1.2rem', color: 'var(--color-text-primary)' }}>{displayScore} / 100</span>
+                                        </div>
+                                    );
+                                })()}
+                            </div>
                             {/* Metadata Block (Strength / Origin) -> Specifically Centered over Controls */}
                             <div style={{ display: 'flex', justifyContent: 'center', gap: '4rem', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1.5rem', width: '100%' }}>
                                 {product.strength && (() => {
@@ -450,7 +450,7 @@ export default function ProductPage({ params }) {
                             {product.has_gifts && !selectedModel?.disable_gifts && (
                                 <div className={styles.controlGroup} style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', marginTop: '1rem' }}>
                                     <label className={styles.label}>Gift & Presentation Setup</label>
-                                    <p style={{ fontSize: '0.85rem', color: '#888', marginBottom: '1rem' }}>Elevate your order with premium curated packaging or select standard delivery.</p>
+                                    <p style={{ fontSize: '0.9rem', color: '#888', marginBottom: '1rem', fontStyle: 'italic' }}>Present it beautifully with our signature packaging.</p>
                                     {giftOptions.length === 0 ? (
                                         <p style={{ fontSize: '0.9rem', color: '#888' }}>Loading options...</p>
                                     ) : (

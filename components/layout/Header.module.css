@@ -118,7 +118,8 @@
     top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    width: max-content;
+    width: auto;
+    min-width: max-content;
     background: rgba(18, 14, 13, 0.98);
     border: 1px solid var(--color-accent);
     padding: 1.5rem 2rem;
@@ -139,9 +140,11 @@
 
 .megaMenuInner {
     display: inline-flex;
-    /* Ensure it doesn't block-stretch to 100% implicitly */
+    flex-wrap: nowrap;
+    white-space: nowrap;
     gap: 3rem;
-    width: max-content;
+    width: auto;
+    min-width: max-content;
 }
 
 .megaColumn {
